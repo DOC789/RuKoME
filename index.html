@@ -141,12 +141,20 @@
 <body>
 
 <div class="container">
+    /* Gaya umum (desktop) */
+.container {
+  display: flex;
+}
+
+/* Gaya untuk Mobile (maksimum lebar 768px) */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Konten disusun ke bawah */
+  }
+}
+
     <section class="hero">
         <img src="https://i.ibb.co.com/7xdPMSk4/1776266186576.jpg">
-        img {
-  max-width: 100%;
-  height: auto;
-}
         <h1>MyRuko Digital</h1>
         <p>Investasi Properti Digital Masa Depan. Tanpa Pajak, Tanpa Ribet.</p>
     </section>
