@@ -6,6 +6,24 @@
     <title>MyRuko - Aset Digital Masa Depan</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
+        <script>
+    // ==========================================
+    // PENGATURAN RUKO (Klien Edit di Sini)
+    // ==========================================
+    const CONFIG = {
+        nomorWA: "62XXXXXXXXXXXXXX", // Ganti dengan nomor WhatsApp klien
+        pesanOtomatis: "Halo Admin, saya tertarik dengan produknya.."
+    };
+
+    // Fungsi otomatis mengubah semua link WA di halaman
+    window.onload = function() {
+        const waLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
+        waLinks.forEach(link => {
+            link.href = `https://wa.me/${CONFIG.nomorWA}?text=${encodeURIComponent(CONFIG.pesanOtomatis)}`;
+        });
+    };
+</script>
+
         :root {
             --bg: #030712;
             --glass: rgba(255, 255, 255, 0.03);
@@ -177,7 +195,7 @@
         <h2>Siap Memiliki Lisensi MyRuko Anda?</h2>
         <p>Dapatkan Hak Bisnis, Hak Reseller, dan Seluruh Template di atas.</p>
         <div class="price-tag">Investasi: Rp 499.000</div>
-        <a href="https://wa.me/628993686867?text=Halo%20Pak%20Michael,%20saya%20tertarik%20dengan%20Lisensi%20MyRuko" class="btn-wa">
+        <a link.href = `https://wa.me/${CONFIG.nomorWA}?text=${encodeURIComponent(CONFIG.pesanOtomatis)}`;?text=Halo%20,%20saya%20tertarik%20dengan%20Lisensi%20MyRuko" class="btn-wa">
             Daftar Sekarang (WA)
         </a>
         <p style="margin-top: 20px;">Gabung Bersama Komunitas ProNomad</p>
